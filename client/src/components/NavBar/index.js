@@ -7,9 +7,9 @@ function Navbar() {
     return (
 
 
-        <nav className="navbar navbar-expand-lg text-light">
+        <nav className="navbar">
             <div className="container">
-                <Link className="navbar-brand" to="/">Google Books</Link>
+                <Link className="navbar-brand" to="/">Google Books Search</Link>
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link
