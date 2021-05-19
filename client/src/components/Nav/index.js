@@ -6,11 +6,6 @@ function Nav() {
     return (
         <ul className="nav nav-tabs">
             <li className="nav-item">
-                <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-                    Google Books
-            </Link>
-            </li>
-            <li className="nav-item">
                 <Link
                     to="/search"
                     className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
