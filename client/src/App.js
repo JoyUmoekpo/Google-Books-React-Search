@@ -1,33 +1,31 @@
 import React, { Component } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar/index.js";
-import Footer from "./components/Footer/index.js";
-import Grid from "./components/Grid/index.js";
-import Search from "./components/Search/index.js";
-import Save from "./components/Save/index.js"
-// import { Search, Saved } from './pages';
-// import Results from "./components/Results/index.js";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 
+import NoMatch from "./pages/NoMatch";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
 import "./App.css";
 
 class App extends Component {
-
+ 
   render() {
     return (
-      <BrowserRouter>
-      <Routes>
+      <Router>
         <div>
           <NavBar />
-          <Grid>
-           <Saved />
-          <Search />
-          {/* <Results /> */}
-          <Footer />
-          </Grid>          
+          <Header />
+          <Wrapper>
+            <Route exact path="/" component={Search} />
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/saved" component={Saved} />
+            <Route exact path="/noMatch" component={NoMatch} />
+          </Wrapper>
         </div>
-      </Routes>
-      </BrowserRouter>
+      </Router>
     )
   };
 };
