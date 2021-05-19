@@ -23,7 +23,7 @@ function Nav() {
                     to="/saved"
                     className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
                 >
-                    Saved
+                    Saved Books
             </Link>
             </li>
         </ul>
